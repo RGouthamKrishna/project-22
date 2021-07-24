@@ -48,17 +48,18 @@ function draw() {
 }
 
 function keyPressed() {
-	if(keyDown ("RIGHT_ARROW")){
+	if(keyCode===RIGHT_ARROW){
 		fairy.x = fairy.x+10;
 	}
 
-	if(keyDown ("LEFT_ARROW")){
+	if(keyCode===LEFT_ARROW){
 		fairy.x = fairy.x-10;
 	}
-
-	if(keyDown("down")){
-		star.x = starBody.position.x;
-		star.y = starBody.position.y;
+    if(keyCode === DOWN_ARROW){
+		 Matter.Body.setStatic(starBody,false); }
 	}
+	
+	
 	//write code here
-}
+	
+
